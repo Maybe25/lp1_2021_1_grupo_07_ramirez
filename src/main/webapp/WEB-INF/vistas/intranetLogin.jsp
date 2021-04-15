@@ -11,7 +11,7 @@
 <meta http-equiv="Cache-Control" content="no-store" />
 <meta http-equiv="Pragma" content="no-cache" />
 
-<script src="js/jquery.min.1.12.3.js"></script>
+<script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/bootstrapValidator.js"></script>
 
@@ -20,7 +20,7 @@
 <link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="css/bootstrapValidator.css">
 
-<title>Intranet | ILP </title>
+<title>Intranet</title>
 </head>   
 <body>    
 
