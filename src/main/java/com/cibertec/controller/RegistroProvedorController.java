@@ -9,6 +9,6 @@ package com.cibertec.controller;
 
 
 
-public class RegistroPruebaController {
+public class RegistroProvedorController {
 
 }
