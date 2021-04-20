@@ -35,7 +35,7 @@
      </ul>
           
    
-s      
+      
      <ul class="nav navbar-nav navbar-right">
        	<li><a href="logout">Salir</a></li>
      </ul>

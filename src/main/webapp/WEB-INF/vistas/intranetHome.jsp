@@ -22,14 +22,14 @@
 <link rel="stylesheet" href="css/bootstrapValidator.css"/>
 
 
-<title>Intranet | ILP </title>
+<title>Intranet</title>
 </head>
 <body>
        
 <jsp:include page="intranetCabecera.jsp" />
 
 <div class="container" style="margin-top: 5%">
-<h3>Intranet del Instituto La Pontificia</h3>
+<h3>Intranet Sistema Delivery</h3>
 <br><br>
 <h4>Bienvenido Sr(a): ${sessionScope.objUsuario.nombreCompleto}</h4><br>                
 <h4>DNI: ${sessionScope.objUsuario.dni}</h4><br>
