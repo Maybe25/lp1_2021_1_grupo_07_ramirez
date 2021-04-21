@@ -53,4 +53,16 @@ public class UsuarioServicioImpl implements UsuarioServicio{
 		repositorio.deleteById(id);		
 	}
 
+	/**
+	 * 
+	 * @author JULIO RAMIREZ
+	 *
+	 */
+	@Override
+	public Usuario insertaUsuario(Usuario obj) {
+		return repositorio.save(obj);
+	}
+
+	
+
 }

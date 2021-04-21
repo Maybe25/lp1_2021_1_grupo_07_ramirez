@@ -24,5 +24,13 @@ public interface UsuarioServicio {
 	public Usuario save(Usuario bean);
 
 	public void delete(int id);
+	
+	/**
+	 * 
+	 * @author JULIO RAMIREZ
+	 *
+	 */
+	
+	public abstract Usuario insertaUsuario(Usuario obj);
 
 }

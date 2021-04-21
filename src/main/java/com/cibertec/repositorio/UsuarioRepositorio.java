@@ -33,4 +33,6 @@ public interface UsuarioRepositorio extends JpaRepository<Usuario, Integer>{
 	public Page<Usuario> findAll(Pageable pageable);
 	
 	
+	
+	
 }
