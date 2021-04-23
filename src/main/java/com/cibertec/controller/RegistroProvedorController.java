@@ -27,16 +27,7 @@ public class RegistroProvedorController {
 	@Autowired
 	private ProveedorServicio  proveedorServicio;
 	
-	@Autowired
-	private UbigeoServicio  ubigeoServicio ;
 
-	@RequestMapping("/listaUbigeo")
-	@ResponseBody
-	public List<Ubigeo> listaubigeo(){
-		return ubigeoServicio.listaUbigeo();
-		
-	}
-	
 	
 	@RequestMapping("/insertaProveedor")
 	@ResponseBody

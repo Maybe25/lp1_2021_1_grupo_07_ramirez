@@ -45,16 +45,16 @@
 			
 			<div class="form-group col-md-3">
 				<label class="control-label" for="id_direccion">Direccion</label>
-				<input class="form-control" type="text" id="id_direccion" name="direcciones" placeholder="Ingrese su Direccion" maxlength="8">    
+				<input class="form-control" type="text" id="id_direccion" name="direcciones" placeholder="Ingrese su Direccion" maxlength="40">    
 			</div>
 			
 			<div class="form-group col-md-4">
 				<label class="control-label" for="id_telefono">Telefono</label>
-				<input class="form-control" type="text" id="id_telefono" name="telefonos" placeholder="Ingrese su telefono fijo" maxlength="100">    
+				<input class="form-control" type="text" id="id_telefono" name="telefonos" placeholder="Ingrese su telefono fijo" maxlength="15">    
 			</div>
 			<div class="form-group col-md-5">
 				<label class="control-label" for="id_celular">Celular</label>
-				<input class="form-control" type="text" id="id_celular" name="celulares" placeholder="Ingrese su numero celular" maxlength="100">    
+				<input class="form-control" type="text" id="id_celular" name="celulares" placeholder="Ingrese su numero celular" maxlength="15">    
 			</div>
 			
 			
@@ -216,7 +216,7 @@ $(document).ready(function() {
 });
 
 
-
+	
 </script>   		
 </body>
 </html>
