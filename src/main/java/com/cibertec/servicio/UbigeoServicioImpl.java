@@ -15,7 +15,7 @@ public class UbigeoServicioImpl implements UbigeoServicio{
 	
 	/**
 	 * 
-	 * @author grupo 7
+	 * @author Grupo 7
 	 *
 	 */
 	

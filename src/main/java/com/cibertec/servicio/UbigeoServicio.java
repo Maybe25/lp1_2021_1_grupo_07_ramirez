@@ -1,7 +1,6 @@
 package com.cibertec.servicio;
 
 import java.util.List;
-
 import com.cibertec.entidad.Ubigeo;
 
 public interface UbigeoServicio {
@@ -10,7 +9,7 @@ public interface UbigeoServicio {
 
 	/**
 	 * 
-	 * @author grupo 7
+	 * @author Grupo 7
 	 *
 	 */
 }
