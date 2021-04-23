@@ -131,7 +131,7 @@ $(document).ready(function() {
             validating: 'glyphicon glyphicon-refresh'
         },
         fields: {
-        		nombre:{
+        		razones:{
                     selector: "#id_razon",
                     validators:{
                         notEmpty: {
@@ -144,7 +144,7 @@ $(document).ready(function() {
                         },
                     }
                 },
-                dni:{
+                rucn:{
                     selector: "#id_ruc",
                     validators:{
                         notEmpty: {
@@ -152,11 +152,11 @@ $(document).ready(function() {
                         },
                         regexp: {
                             regexp: /^[0-9]{11}$/,
-                            message: 'el ruc es 11 d�gitos'
+                            message: 'el ruc es de 11 digitos'
                         }
                     }
                 },
-                apellidos:{
+                direcciones:{
                     selector: "#id_direccion",
                     validators:{
                         notEmpty: {
@@ -169,7 +169,7 @@ $(document).ready(function() {
                         }
                     }
                 },
-                direccion:{
+                telefonos:{
                     selector: "#id_telefono",
                     validators:{
                         notEmpty: {
@@ -182,7 +182,7 @@ $(document).ready(function() {
                     }
                 },
                 
-                 direccion:{
+                 celulares:{
                     selector: "#id_celular",
                     validators:{
                         notEmpty: {
@@ -195,7 +195,7 @@ $(document).ready(function() {
                     }
                 },
                 
-                 direccion:{
+                 contactos:{
                     selector: "#id_contacto",
                     validators:{
                         notEmpty: {
