@@ -5,7 +5,11 @@ import org.springframework.stereotype.Service;
 
 import com.cibertec.entidad.Marca;
 import com.cibertec.repositorio.MarcaRepositorio;
-
+/**
+ * 
+ * @author JOSE JUNIOR
+ *
+ */
 @Service
 public class MarcaServicioImpl implements MarcaServicio {
 

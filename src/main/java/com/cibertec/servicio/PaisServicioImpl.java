@@ -5,7 +5,11 @@ import org.springframework.stereotype.Service;
 import com.cibertec.entidad.Pais;
 import com.cibertec.repositorio.PaisRepositorio;
 
-
+/**
+ * 
+ * @author JOSE JUNIOR
+ *
+ */
 
 @Service
 public class PaisServicioImpl implements PaisServicio {

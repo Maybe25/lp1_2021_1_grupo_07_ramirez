@@ -42,7 +42,7 @@ public class RegistroMarcaController {
 	     
 	     Marca objSalida = marcaServicio.insertarMarca(obj);
 	     if (objSalida == null) {
-	    	 salida.put("MENSAJE", "REGISTRO CORRECTO ");
+	    	 salida.put("MENSAJE", "REGISTRO INCORRECTO ");
 			
 		}else {
 			salida.put("MENSAJE", "REGISTRO EXITOSO");
