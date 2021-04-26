@@ -13,6 +13,7 @@ import com.cibertec.repositorio.UbigeoRepositorio;
 public class UbigeoServicioImpl implements UbigeoServicio{
 	
 	
+	
 	/**
 	 * 
 	 * @author Grupo 7
@@ -26,6 +27,21 @@ public class UbigeoServicioImpl implements UbigeoServicio{
 	@Override
 	public List<Ubigeo> listaUbigeo() {
 		return repositorio.findAll();
+	}
+	
+	@Override
+	public List<String> listaDepartamentos() {
+		return repositorio.listaDepartamentos();
+	}
+
+	@Override
+	public List<String> listaProvincias(String departamento) {
+		return repositorio.listaProvincias(departamento);
+	}
+
+	@Override
+	public List<Ubigeo> listaDistritos(String departamento, String provincia) {
+		return repositorio.listaDistritos(departamento, provincia);
 	}
 	
 }

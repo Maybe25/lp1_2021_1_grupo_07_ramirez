@@ -12,4 +12,7 @@ public interface UbigeoServicio {
 	 * @author Grupo 7
 	 *
 	 */
+	public abstract List<String> listaDepartamentos();
+	public abstract List<String> listaProvincias(String departamento);
+	public abstract List<Ubigeo> listaDistritos(String departamento, String provincia);
 }
