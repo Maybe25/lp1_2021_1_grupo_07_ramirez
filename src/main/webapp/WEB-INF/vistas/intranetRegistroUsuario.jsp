@@ -181,10 +181,13 @@ function limpiar(){
 	$("#id_apellidos").val('');
 	$("#id_dni").val('');
 	$("#id_login").val('');
-	$("#id_passowrd").val('');
+	$("#id_password").val('');
 	$("#id_direccion").val('');
 	$("#id_estado").val(' ');
-	$("#id_id_ubigeo").val(' ');
+	$("#id_departamento").val(' ');
+	$("#id_provincia").val(' ');
+	$("#id_distrito").val(' ');
+	
 }
 
 
