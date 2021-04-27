@@ -64,13 +64,25 @@
 			</div>
 			
 			
-			<div class="form-group col-md-6">
-				<label class="control-label" for="id_ubigeo">Ubicacion Geografica</label>
-				<select id="id_ubigeo" name="ubigeo.idUbigeo" class="form-control"> 
-				<option value = "" >[Seleccione] </option>
-				
+	<div class="form-group col-md-8">
+				<label class="control-label" for="id_departamento">DEPARTAMENTO</label>
+				<select id="id_departamento" name="departamento" class='form-control'>
+					<option value=" ">[Seleccione Departamento]</option>    
 				</select>
-			</div>
+		    </div>
+		   	<div class="form-group col-md-8">
+				<label class="control-label" for="id_provincia">PROVINCIA</label>
+				<select id="id_provincia" name="provincia" class='form-control'>
+					<option value=" ">[Seleccione Provincia]</option>    
+				</select>
+		    </div>
+		   <div class="form-group col-md-8">
+				<label class="control-label" for="id_distrito">DISTRITO</label>
+				<select id="id_distrito" name="ubigeo.idUbigeo" class='form-control'>
+					<option value=" ">[Seleccione Distrito]</option>    
+				</select>
+		    </div>
+			
 			
 			<div class="form-group col-md-12">
 				<button id="id_registrar" type="button" class="btn btn-primary" >Crea Proveedor</button>
@@ -81,9 +93,41 @@
 </div>
 
 <script type="text/javascript">
-$.getJSON("listaUbigeo", {}, function(data){
-	$.each(data, function(index,item){
-		$("#id_ubigeo").append("<option value="+item.idUbigeo +">"+ item.departamento +" | "+item.provincia+" | "+item.distrito+ "</option>");
+
+
+$.getJSON("listaDepartamentos",{}, function(data){
+	$.each(data, function(i, item){
+		$("#id_departamento").append("<option value='"+ item +"'>"+ item+"</option>");
+	});
+});
+
+$("#id_departamento").change(function(){
+	var var_dep = $("#id_departamento").val();
+
+	$("#id_provincia").empty();
+	$("#id_provincia").append("<option value=' '>[Seleccione Provincia]</option>");
+
+	$("#id_distrito").empty();
+	$("#id_distrito").append("<option value=' '>[Seleccione Distrito]</option>");
+	
+	$.getJSON("listaProvincias",{"departamento":var_dep}, function(data){
+		$.each(data, function(i, item){
+			$("#id_provincia").append("<option value='"+ item +"'>"+ item+"</option>");
+		});
+	});
+});
+
+$("#id_provincia").change(function(){
+	var var_dep = $("#id_departamento").val();
+	var var_pro = $("#id_provincia").val();
+
+	$("#id_distrito").empty();
+	$("#id_distrito").append("<option value=' '>[Seleccione Distrito]</option>");
+	
+	$.getJSON("listaDistritos",{"departamento":var_dep,"provincia":var_pro}, function(data){
+		$.each(data, function(i, item){
+			$("#id_distrito").append("<option value='"+ item.idUbigeo +"'>"+ item.distrito+"</option>");
+		});
 	});
 });
 
@@ -97,7 +141,7 @@ $("#id_registrar").click(function (){
 		$.ajax({
 			type: 'POST',  
 			data: $("#id_form").serialize(),
-			url: 'insertaProveedor',
+			url: 'insertaUsuario',
 			success: function(data){
 				mostrarMensaje(data.MENSAJE);
 				limpiar();
@@ -175,9 +219,9 @@ $(document).ready(function() {
                         notEmpty: {
                              message: 'El numero de telefono es obligatorio'
                         },
-                        sregexp: {
-                            regexp: /^[0-9]$/,
-                            message: 'el telefono  es invalido'
+                        regexp: {
+                            regexp: /^\d{7}$/,
+                            message: 'el telefono  debe ser 7 digitos'
                         }
                     }
                 },
@@ -188,9 +232,9 @@ $(document).ready(function() {
                         notEmpty: {
                              message: 'El numero de celular es obligatorio'
                         },
-                        sregexp: {
-                            regexp: /^[0-9]$/,
-                            message: 'el celular  es invalido'
+                        regexp: {
+                            regexp: /^\d{9}$/,
+                            message: 'el celular  debe ser 9 digitos'
                         }
                     }
                 },
@@ -208,13 +252,40 @@ $(document).ready(function() {
                         }
                     }
                 },
+       departamento:{
+                    selector: "#id_departamento",
+                    validators:{
+                        notEmpty: {
+                             message: 'El departamento es requerido'
+                        },
+                        
+                    }
+                },
+                provincia:{
+                    selector: "#id_provincia",
+                    validators:{
+                        notEmpty: {
+                             message: 'La provincia es requerido'
+                        },
+                        
+                    }
+                },
+                ubigeo:{
+                    selector: "#id_distrito",
+                    validators:{
+                        notEmpty: {
+                             message: 'El distrito es requerido'
+                        },
+                        
+                    }
+                },
+         
                 
         }   
     });
 
     
 });
-
 
 	
 </script>   		
