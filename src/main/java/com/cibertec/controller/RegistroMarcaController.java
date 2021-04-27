@@ -35,7 +35,7 @@ public class RegistroMarcaController {
 	}
 	
 	@ResponseBody
-	@RequestMapping("/insertarMarca")
+	@RequestMapping("/registraMarca")
 	public Map<String,Object> insertarMarca(Marca obj){
 	     Map<String,Object> salida= new HashMap<>();
 	     
