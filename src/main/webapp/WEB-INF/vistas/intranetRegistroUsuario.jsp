@@ -84,13 +84,13 @@
 			
 			<div class="form-group col-md-8">
 				<label class="control-label" for="id_departamento">DEPARTAMENTO</label>
-				<select id="id_departamento" name="" class='form-control'>
+				<select id="id_departamento" name="departamento" class='form-control'>
 					<option value=" ">[Seleccione Departamento]</option>    
 				</select>
 		    </div>
 		   	<div class="form-group col-md-8">
 				<label class="control-label" for="id_provincia">PROVINCIA</label>
-				<select id="id_provincia" name="" class='form-control'>
+				<select id="id_provincia" name="provincia" class='form-control'>
 					<option value=" ">[Seleccione Provincia]</option>    
 				</select>
 		    </div>
@@ -251,6 +251,69 @@ $(document).ready(function() {
                         }
                     }
                 },
+                login:{
+                    selector: "#id_login",
+                    validators:{
+                        notEmpty: {
+                             message: 'El login es oblitario'
+                        },
+                        stringLength: {
+                            min: 5,
+                            max: 20,
+                            message: 'El login no es valido'
+                        }
+                    }
+                },
+                password:{
+                    selector: "#id_password",
+                    validators:{
+                        notEmpty: {
+                             message: 'El password es oblitario'
+                        },
+                        stringLength: {
+                            min: 5,
+                            max: 20,
+                            message: 'El password no es valido'
+                        }
+                    }
+                },
+                estado:{
+                    selector: "#id_estado",
+                    validators:{
+                        notEmpty: {
+                             message: 'El estado es requerido'
+                        },
+                        
+                    }
+                },
+                departamento:{
+                    selector: "#id_departamento",
+                    validators:{
+                        notEmpty: {
+                             message: 'El departamento es requerido'
+                        },
+                        
+                    }
+                },
+                provincia:{
+                    selector: "#id_provincia",
+                    validators:{
+                        notEmpty: {
+                             message: 'La provincia es requerido'
+                        },
+                        
+                    }
+                },
+                ubigeo:{
+                    selector: "#id_distrito",
+                    validators:{
+                        notEmpty: {
+                             message: 'El distrito es requerido'
+                        },
+                        
+                    }
+                },
+         
                 
         }   
     });
