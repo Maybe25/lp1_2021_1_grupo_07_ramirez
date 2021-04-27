@@ -54,7 +54,7 @@
 						</div>
 
 						<div class="form-group col-md-3">
-							<label class="control-label" for="id_pais">Pais</label> <select
+							<label class="control-label" for="id_pais">País</label> <select
 								id="id_pais" name="pais.idPais" class="form-control">
 								<option value=" ">[Seleccione]</option>
 							</select>
@@ -144,7 +144,7 @@ $('#id_form').bootstrapValidator({
                     selector: "#id_pais",
                     validators:{
                         notEmpty: {
-                             message: 'El estado es un campo obligatorio'
+                             message: 'El país es un campo obligatorio'
                         },
                      }
                 },
