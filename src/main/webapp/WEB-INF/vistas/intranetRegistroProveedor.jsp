@@ -35,26 +35,26 @@
 
 			<div class="form-group col-md-6">
 				<label class="control-label" for="id_razon">Razon</label>
-				<input class="form-control" type="text" id="id_razon" name="razones" placeholder="Ingrese Razon Social" maxlength="40">    
+				<input class="form-control" type="text" id="id_razon" name="razonsocial" placeholder="Ingrese Razon Social" maxlength="40">    
 			</div>
 			
 			<div class="form-group col-md-6">
 				<label class="control-label" for="id_ruc">Ruc</label>
-				<input class="form-control" type="text" id="id_ruc" name="rucn" placeholder="Ingrese su Ruc " maxlength="40">    
+				<input class="form-control" type="text" id="id_ruc" name="ruc" placeholder="Ingrese su Ruc " maxlength="40">    
 			</div>
 			
 			<div class="form-group col-md-3">
 				<label class="control-label" for="id_direccion">Direccion</label>
-				<input class="form-control" type="text" id="id_direccion" name="direcciones" placeholder="Ingrese su Direccion" maxlength="40">    
+				<input class="form-control" type="text" id="id_direccion" name="direccion" placeholder="Ingrese su Direccion" maxlength="40">    
 			</div>
 			
 			<div class="form-group col-md-4">
 				<label class="control-label" for="id_telefono">Telefono</label>
-				<input class="form-control" type="text" id="id_telefono" name="telefonos" placeholder="Ingrese su telefono fijo" maxlength="15">    
+				<input class="form-control" type="text" id="id_telefono" name="telefono" placeholder="Ingrese su telefono fijo" maxlength="15">    
 			</div>
 			<div class="form-group col-md-5">
 				<label class="control-label" for="id_celular">Celular</label>
-				<input class="form-control" type="text" id="id_celular" name="celulares" placeholder="Ingrese su numero celular" maxlength="15">    
+				<input class="form-control" type="text" id="id_celular" name="celular" placeholder="Ingrese su numero celular" maxlength="15">    
 			</div>
 			
 			
@@ -175,7 +175,7 @@ $(document).ready(function() {
             validating: 'glyphicon glyphicon-refresh'
         },
         fields: {
-        		razones:{
+        		razonsocial:{
                     selector: "#id_razon",
                     validators:{
                         notEmpty: {
@@ -188,7 +188,7 @@ $(document).ready(function() {
                         },
                     }
                 },
-                rucn:{
+                ruc:{
                     selector: "#id_ruc",
                     validators:{
                         notEmpty: {
@@ -200,7 +200,7 @@ $(document).ready(function() {
                         }
                     }
                 },
-                direcciones:{
+                direccion:{
                     selector: "#id_direccion",
                     validators:{
                         notEmpty: {
@@ -213,7 +213,7 @@ $(document).ready(function() {
                         }
                     }
                 },
-                telefonos:{
+                telefono:{
                     selector: "#id_telefono",
                     validators:{
                         notEmpty: {
@@ -226,7 +226,7 @@ $(document).ready(function() {
                     }
                 },
                 
-                 celulares:{
+                 celular:{
                     selector: "#id_celular",
                     validators:{
                         notEmpty: {
