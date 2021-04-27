@@ -38,5 +38,12 @@ public class UbigeoController {
 	public List<Ubigeo> verDistritos(String departamento, String provincia) {
 		return ubigeoService.listaDistritos(departamento, provincia);
 	}
+	
+	@RequestMapping("/listaUbigeo")
+	@ResponseBody
+	public List<Ubigeo>listaUbigeo(){
+		return ubigeoService.listaUbigeo();
+	}
+	
 }
 

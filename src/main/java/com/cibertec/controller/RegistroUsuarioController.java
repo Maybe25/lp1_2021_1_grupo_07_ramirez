@@ -27,17 +27,7 @@ public class RegistroUsuarioController {
 	@Autowired
 	private UsuarioServicio usuarioServicio;
 	
-	@Autowired
-	private UbigeoServicio ubigeoServicio;
 	
-	
-	
-	
-	@RequestMapping("/listaUbigeo")
-	@ResponseBody
-	public List<Ubigeo>listaUbigeo(){
-		return ubigeoServicio.listaUbigeo();
-	}
 	
 	
 	@RequestMapping("/insertaUsuario")
