@@ -60,7 +60,7 @@
 			
 			<div class="form-group col-md-6">
 				<label class="control-label" for="id_contacto">Contacto</label>
-				<input class="form-control" type="text" id="id_contacto" name="contactos" placeholder="Ingrese nombre de contacto" maxlength="100">    
+				<input class="form-control" type="text" id="id_contacto" name="contacto" placeholder="Ingrese nombre de contacto" maxlength="100">    
 			</div>
 			
 			
@@ -141,7 +141,7 @@ $("#id_registrar").click(function (){
 		$.ajax({
 			type: 'POST',  
 			data: $("#id_form").serialize(),
-			url: 'insertaUsuario',
+			url: 'insertaProveedor',
 			success: function(data){
 				mostrarMensaje(data.MENSAJE);
 				limpiar();
@@ -239,7 +239,7 @@ $(document).ready(function() {
                     }
                 },
                 
-                 contactos:{
+                 contacto:{
                     selector: "#id_contacto",
                     validators:{
                         notEmpty: {
