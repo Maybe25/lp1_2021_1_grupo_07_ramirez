@@ -1,7 +1,5 @@
 package com.cibertec.servicio;
 
-//Librerias Nesesarias
-import java.util.List;
 import com.cibertec.entidad.Producto;
 
 /**

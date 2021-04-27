@@ -18,7 +18,6 @@ public class Producto {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int idProducto;
 	private String nombre;
-	private String descripcion;
 	private String serie;
 	private double precio;
 	private int stock;
@@ -47,14 +46,6 @@ public class Producto {
 
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
-	}
-
-	public String getDescripcion() {
-		return descripcion;
-	}
-
-	public void setDescripcion(String descripcion) {
-		this.descripcion = descripcion;
 	}
 
 	public String getSerie() {

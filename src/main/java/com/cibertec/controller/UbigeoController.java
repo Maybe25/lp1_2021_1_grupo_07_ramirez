@@ -10,40 +10,33 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.cibertec.entidad.Ubigeo;
 import com.cibertec.servicio.UbigeoServicio;
 
+// @ResponseBody permite que un arraylit se convierta aformato JSON
+
 @Controller
 public class UbigeoController {
 	
 	@Autowired
-	private UbigeoServicio ubigeoService;
+	private UbigeoServicio ubigeoServicio;
 
-	@RequestMapping("/verUbigeo")
-	public String verUbigeo() {
-		return "ubigeoJquery";
-	}
-	
 	@RequestMapping("/listaDepartamentos")
 	@ResponseBody
 	public List<String> verDepartamentos() {
-		return ubigeoService.listaDepartamentos();
+		return ubigeoServicio.listaDepartamentos();
 	}
 	
 	@RequestMapping("/listaProvincias")
 	@ResponseBody
 	public List<String> verProvincias(String departamento) {
-		return ubigeoService.listaProvincias(departamento);
+		return ubigeoServicio.listaProvincias(departamento);
 	}
 	
 	@RequestMapping("/listaDistritos")
 	@ResponseBody
 	public List<Ubigeo> verDistritos(String departamento, String provincia) {
-		return ubigeoService.listaDistritos(departamento, provincia);
+		return ubigeoServicio.listaDistritos(departamento, provincia);
 	}
-	
-	@RequestMapping("/listaUbigeo")
-	@ResponseBody
-	public List<Ubigeo>listaUbigeo(){
-		return ubigeoService.listaUbigeo();
-	}
-	
 }
+
+
+
 

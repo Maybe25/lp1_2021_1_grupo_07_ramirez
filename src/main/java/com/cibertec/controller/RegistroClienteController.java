@@ -1,7 +1,6 @@
 package com.cibertec.controller;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,9 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.cibertec.entidad.Cliente;
-import com.cibertec.entidad.Ubigeo;
 import com.cibertec.servicio.ClienteServicio;
-import com.cibertec.servicio.UbigeoServicio;
 
  
 /**
@@ -25,8 +22,7 @@ public class RegistroClienteController {
 	
 	@Autowired
 	private ClienteServicio clienteServicio;
-	@Autowired
-	private UbigeoServicio ubigeoServicio;
+
 	
 
 	 

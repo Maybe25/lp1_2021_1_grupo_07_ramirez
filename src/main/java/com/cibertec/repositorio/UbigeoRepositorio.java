@@ -8,10 +8,8 @@ import org.springframework.data.repository.query.Param;
 
 import com.cibertec.entidad.Ubigeo;
 
-public interface UbigeoRepositorio extends JpaRepository<Ubigeo, Integer>
+public interface UbigeoRepositorio extends JpaRepository<Ubigeo, Integer>{
 
-{
-	
 	@Query("select distinct x.departamento from Ubigeo x")
 	public abstract List<String> listaDepartamentos();
 	
@@ -20,6 +18,6 @@ public interface UbigeoRepositorio extends JpaRepository<Ubigeo, Integer>
 	
 	@Query("select x from Ubigeo x where x.departamento = :var_dep and x.provincia = :var_pro")
 	public abstract List<Ubigeo> listaDistritos(@Param("var_dep")String departamento, @Param("var_pro")String provincia);
-		
+	
+	
 }
-
