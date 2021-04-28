@@ -46,14 +46,14 @@
 			</div>
 			
 			 		<div class="form-group col-md-6">
-				<label class="control-label" for="id_correo">correo	</label>
+				<label class="control-label" for="id_correo">Correo	</label>
 				<input class="form-control" type="text" id="id_correo" name="correos" placeholder="Ingrese el correo" maxlength="100">    
 			</div>
 			 
 			 
 			
 			<div class="form-group col-md-6">
-				<label class="control-label" for="id_direccion">Direccion	</label>
+				<label class="control-label" for="id_direccion">Dirección	</label>
 				<input class="form-control" type="text" id="id_direccion" name="direccion" placeholder="Ingrese la Direccion" maxlength="100">    
 			</div>
 			
@@ -77,19 +77,19 @@
 			
 			
 			<div class="form-group col-md-8">
-				<label class="control-label" for="id_departamento">DEPARTAMENTO</label>
+				<label class="control-label" for="id_departamento">Departamento</label>
 				<select id="id_departamento" name="" class='form-control'>
 					<option value=" ">[Seleccione Departamento]</option>    
 				</select>
 		    </div>
 		   	<div class="form-group col-md-8">
-				<label class="control-label" for="id_provincia">PROVINCIA</label>
+				<label class="control-label" for="id_provincia">Provincia</label>
 				<select id="id_provincia" name="" class='form-control'>
 					<option value=" ">[Seleccione Provincia]</option>    
 				</select>
 		    </div>
 		   <div class="form-group col-md-8">
-				<label class="control-label" for="id_distrito">DISTRITO</label>
+				<label class="control-label" for="id_distrito">Distrito</label>
 				<select id="id_distrito" name="ubigeo.idUbigeo" class='form-control'>
 					<option value=" ">[Seleccione Distrito]</option>    
 				</select>
@@ -237,9 +237,7 @@ $(document).ready(function() {
                         notEmpty: {
                              message: 'El correo es obligatorio'
                         },
-                        stringLength: {
-                            min: 5,
-                            max: 40,
+                        emailAddress: {
                             message: 'El correo no es valido'
                         }
                     }
